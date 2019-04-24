@@ -10,7 +10,8 @@ const Subreddit = ({subreddits}) => (
         key={i}
         title={post.title}
         author={post.author}
-      permalink={post.permalink}
+        permalink={post.permalink}
+        created={post.created}
       />
     )}
   </div>
