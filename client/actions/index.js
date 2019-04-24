@@ -24,6 +24,8 @@ export const showError = (errorMessage) => {
   }
 }
 
+// export const enterTitle = ()
+
 export function fetchPosts (subreddit) {
   return (dispatch) => {
     dispatch(requestPosts())
