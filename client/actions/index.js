@@ -3,6 +3,7 @@ import request from 'superagent'
 export const SHOW_ERROR = 'SHOW_ERROR'
 export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const REQUEST_POSTS = 'REQUEST_POSTS'
+export const NEW_SUBREDDIT = 'NEW_SUBREDDIT'
 
 export const requestPosts = () => {
   return {
@@ -19,8 +20,15 @@ export const receivePosts = (posts) => {
 
 export const showError = (errorMessage) => {
   return {
-    type: SHOW_ERROR,
+    type: SHOW_ERROR,newzealand,
     errorMessage: errorMessage
+  }
+}
+
+export const newSubReddit = (subreddit) => {
+  return {
+    type: NEW_SUBREDDIT,
+    subreddit: subreddit
   }
 }
 

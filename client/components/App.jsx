@@ -5,9 +5,12 @@ import LoadSubreddit from './LoadSubreddit'
 import SubredditList from './SubredditList'
 import WaitIndicator from './WaitIndicator'
 
+
+
 const App = () => (
   <div className='app'>
     <ErrorMessage />
+
     <LoadSubreddit>
       <WaitIndicator />
     </LoadSubreddit>

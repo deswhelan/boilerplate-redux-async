@@ -6,8 +6,9 @@ const router = express.Router()
 router.use(express.json())
 
 router.get('/subreddit/:subreddit', (req, res) => {
+  let sub = req.params.subreddit
   request
-    .get(`http://www.reddit.com/r/${req.params.subreddit}.json`)
+    .get(`http://www.reddit.com/r/${sub}.json`)
     .end((err, result) => {
       if (err) {
         res.status(500).send(err.message)
