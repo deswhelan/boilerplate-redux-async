@@ -4,10 +4,12 @@ import errorMessage from './error-message'
 import subreddits from './subreddits'
 import waiting from './waiting'
 import newSubReddit from './newSubReddit'
+import joke from './joke'
 
 export default combineReducers({
   errorMessage,
   subreddits,
   waiting,
-  newSubReddit
+  newSubReddit,
+  joke
 })

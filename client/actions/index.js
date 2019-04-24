@@ -5,6 +5,8 @@ export const RECEIVE_POSTS = 'RECEIVE_POSTS'
 export const REQUEST_POSTS = 'REQUEST_POSTS'
 export const NEW_SUBREDDIT = 'NEW_SUBREDDIT'
 
+export const RECEIVE_JOKE = 'RECEIVE_JOKE'
+
 export const requestPosts = () => {
   return {
     type: REQUEST_POSTS
@@ -43,5 +45,28 @@ export function fetchPosts (subreddit) {
       .catch(err => {
         dispatch(showError(err.message))
       })
+  }
+}
+
+export function fetchJokes () {
+  
+  return request
+    .get(`/api/v1/reddit/jokes/joke`)
+    .then(res => {
+      dispatch(receiveJoke(res.body))
+    })
+    .catch(err => {
+      dispatch(showError(err.message))
+    })
+  
+}
+
+
+
+export const receiveJoke = (joke) => {
+  return {
+    type: RECEIVE_JOKE,
+    question: joke.setup,
+    answer: joke.punchline
   }
 }

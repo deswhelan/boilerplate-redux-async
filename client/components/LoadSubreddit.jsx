@@ -15,7 +15,7 @@ const LoadSubreddit = ({children, dispatch, searchterm}) => (
   </div>
 )
 function mapStateToProps (state) {
-  console.log(state)
+
   return {
     searchterm: state.newSubReddit
   }
