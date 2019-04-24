@@ -3,15 +3,22 @@ import { connect } from 'react-redux'
 
 import Post from './Post'
 
+function convertDate(unix) {
+  const newDate = new Date(unix)
+  return newDate.toString()
+}
+
+
 const Subreddit = ({ subreddits }) => (
   <div>
-    {subreddits.map((post, i) =>
-      <Post
+    {subreddits.map((post, i) => {
+      console.log(convertDate(post.created))
+      return (< Post
         key={i}
         title={post.title}
-        date={post.date}
-        time={post.time}
-      />
+        time={convertDate(post.created)}
+      />)
+    }
     )}
   </div>
 )
