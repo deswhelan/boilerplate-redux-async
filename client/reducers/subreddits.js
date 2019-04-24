@@ -1,6 +1,7 @@
-import {RECEIVE_POSTS} from '../actions'
+import { RECEIVE_POSTS } from '../actions'
 
-function subreddits (state = [], action) {
+function subreddits(state = [], action) {
+  console.log(action)
   switch (action.type) {
     case RECEIVE_POSTS:
       return action.posts
