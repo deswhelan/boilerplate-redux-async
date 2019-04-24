@@ -1,7 +1,13 @@
 import React from 'react'
 
-const Post = ({title, selftext}) => (
-  <div><b>{title}</b>:<br /> {selftext}<br /><br /></div>
+// let convertDate = () => {
+//   return (new Date(date * 1000))
+// }
+
+const Post = ({title, date, selftext}) => (
+  <div><b>{title}</b><br />
+  {(new Date(date * 1000)).toString()}<br />
+  {selftext}<br /><br /></div>
 )
 
 export default Post
