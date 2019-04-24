@@ -14,11 +14,11 @@ class InputSubreddit extends React.Component {
      
       this.props.dispatch(newSubReddit(e.target.value))
     }
-    
+
     return (
       <div>
         <p>Enter sub-Reddit:
-        <input type='text' name='subred'  onChange={handleChange} />
+        <input type='text' name='subred' onChange={handleChange} />
         </p>
       </div>
     )
