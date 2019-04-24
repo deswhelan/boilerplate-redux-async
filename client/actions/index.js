@@ -24,7 +24,7 @@ export const showError = (errorMessage) => {
   }
 }
 
-export function fetchPosts (subreddit) {
+export function fetchPosts(subreddit) {
   return (dispatch) => {
     dispatch(requestPosts())
     return request
